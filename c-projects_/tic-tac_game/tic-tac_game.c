@@ -9,7 +9,20 @@
 *
 */
 
+char board[3][3];
+const char PLAYER = 'X';
+const char COMPUTER = 'O';
+
 int main(void)
 {
+	char winnner = ' ';
+	
+	resetBoard();
+	while (winner == ' ' && checkFreeSpaces() != 0)
+	{
+		printBoard();
+	}
 
+
+	return (0);
 }

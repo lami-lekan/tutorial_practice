@@ -29,7 +29,19 @@ void printBoard(void)
 
 int checkFreeSpaces(void)
 {
+	int freeSpaces = 9;
 
+	for(int i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 3, j++)
+		{
+			if(board[i][j] != ' ')
+			{
+				freeSpaces--;
+			}
+		}
+	}
+	return freeSpaces;
 }
 
 void playerMove(void)
