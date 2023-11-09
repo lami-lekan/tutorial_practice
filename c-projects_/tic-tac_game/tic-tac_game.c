@@ -21,6 +21,15 @@ int main(void)
 	while (winner == ' ' && checkFreeSpaces() != 0)
 	{
 		printBoard();
+
+		playerMove();
+		winner = checkWinner();
+
+		if(winner != ' ' || checkFreeSpaces() == 0)
+		{
+			break;
+		}
+
 	}
 
 
